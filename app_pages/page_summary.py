@@ -5,6 +5,7 @@ def project_summary_page():
     """
     Contents of summary page.
     """
+    st.title("Summary")
 
     st.header("Introduction :cherries:")
 
