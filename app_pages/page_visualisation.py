@@ -5,6 +5,8 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from matplotlib.image import imread
+import random
+import itertools
 
 def cherry_leaves_visualisation_page():
     """
@@ -14,7 +16,7 @@ def cherry_leaves_visualisation_page():
     """
     st.title("Visualisation")
 
-    st.markdown("This section will answer business requirement 1:"
+    st.markdown("This section will answer Business Requirement 1:"
                 " The client is interested in visualising the differences"
                 " between healthy cherry leaves and those containing powdery mildew.")
 
@@ -55,6 +57,55 @@ def cherry_leaves_visualisation_page():
                 " The powdery mildew image shows there are white specks on the leaves. In the variability"
                 " plot, the light patches show that the variability between the images is highest where"
                 " the specks of mildew would be.")
+
+    st.header("Image Montage")
+    
+    st.markdown("Click on the 'Image Montage' button to view/refresh the image montage.")
+
+    data_dir = "inputs/cherry_leaves_dataset/cherry_leaves"
+    labels_folder = os.listdir(data_dir + "/validation")
+    label = st.selectbox(label="Choose label", options=labels_folder, index=0)
+    
+    if st.button("Image Montage"):
+        image_montage_data(dir_path=data_dir + "/validation",
+                           label=label, 
+                           nrows=10, ncols=3)
+
+
+def image_montage_data(dir_path, label, nrows, ncols, figsize=(15, 30)):
+    """
+    Function to subset label of interest, check if label is in the folder,
+    check if grid space is greater than the subset size and display the images. 
+    """
+    sns.set_style("white")
+    labels = os.listdir(dir_path)
+    if label in labels:
+        image_list = os.listdir(dir_path + "/" + label)
+        if nrows * ncols < len(image_list):
+            image_index = random.sample(image_list, nrows * ncols)
+        else: 
+            print(f"The montage space {nrows * ncols} is greater than the subset.")
+            print(f"Reduce the nrows and ncols.")
+            return
+        
+        list_of_rows = range(0, nrows)
+        list_of_cols = range(0, ncols)
+        ax_indices = list(itertools.product(list_of_rows, list_of_cols))
+
+        fig, axes = plt.subplots(nrows=nrows, ncols=ncols, figsize=figsize)
+        for i in range(0, nrows * ncols):
+            file = imread(dir_path + "/" + label + "/" + image_index[i])
+            img_shape = file.shape
+            axes[ax_indices[i][0], ax_indices[i][1]].set_title(f"Height: {img_shape[0]}px Width: {img_shape[1]}px")
+            axes[ax_indices[i][0], ax_indices[i][1]].imshow(file)
+            # Set the tick locations of x axis
+            axes[ax_indices[i][0], ax_indices[i][1]].set_xticks([])
+            # Set the tick locations of y axis
+            axes[ax_indices[i][0], ax_indices[i][1]].set_yticks([])
+        plt.tight_layout()
+        st.pyplot(fig=fig)
+    else:
+        print(f"Choose from the labels: {labels}")
      
     
 
