@@ -16,14 +16,21 @@ def cherry_leaves_visualisation_page():
     """
     st.title("Visualisation")
 
-    st.markdown("This section will answer Business Requirement 1:"
+    st.markdown("This section will fulfill Business Requirement 1:"
                 " The client is interested in visualising the differences"
                 " between healthy cherry leaves and those containing powdery mildew.")
 
+    file_path = "outputs/v1"
+    
+    st.header("Image Dimensions")
+ 
+    if st.button("Dimensions Plot"):
+        dimensions = plt.imread(f"{file_path}/height_width_plot.png")
+        st.image(dimensions, caption="Height vs Width (px)")
+
+        st.info("Every image in the data set has a height and width of 256 px.")
 
     st.header("Average Image and Image Variability")
-
-    file_path = "outputs/v1"
 
     if st.button("Healthy"):
         mean_std_healthy = plt.imread(f"{file_path}/mean_std_healthy.png")
@@ -65,7 +72,7 @@ def cherry_leaves_visualisation_page():
     data_dir = "inputs/cherry_leaves_dataset/cherry_leaves"
     labels_folder = os.listdir(data_dir + "/validation")
     label = st.selectbox(label="Choose label", options=labels_folder, index=0)
-    
+
     if st.button("Image Montage"):
         image_montage_data(dir_path=data_dir + "/validation",
                            label=label, 
