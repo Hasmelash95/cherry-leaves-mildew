@@ -31,7 +31,7 @@ def prediction_probablities_plot(probability, pred_class):
                 x="Label",
                 y=prob_per_class["Probability"],
                 range_y=[0, 1],
-                width=600, height=300, template='seaborn'
+                width=600, height=500, template='seaborn'
                 )
     st.plotly_chart(fig)
 
@@ -61,7 +61,7 @@ def load_model_to_predict_image(input_image, version):
     if pred_class == target_map[0]:
         probability = 1 - probability 
     
-    st.write(f"The predictive analysis indicates the sample cherry leaf"
-              " belongs to the {pred_class} label.")
+    st.markdown(f"The predictive analysis indicates the sample cherry leaf"
+                f" belongs to the {pred_class} label.")
 
     return probability, pred_class
