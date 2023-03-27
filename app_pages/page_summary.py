@@ -40,7 +40,7 @@ def project_summary_page():
     st.success("1. The client is interested in visualising the differences between"
                " healthy cherry leaves and those containing powdery mildew. (See"
                " the next page).\n 2. The client is interested in predicting whether"
-               " a given cherr leaf is healthy or contains powdery mildew.")
+               " a given cherry leaf is healthy or contains powdery mildew.")
 
     st.header("Additional Information")
 
