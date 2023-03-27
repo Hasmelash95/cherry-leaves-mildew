@@ -19,6 +19,8 @@ def cherry_leaves_visualisation_page():
     st.markdown("This section will fulfill Business Requirement 1:"
                 " The client is interested in visualising the differences"
                 " between healthy cherry leaves and those containing powdery mildew.")
+    
+    st.markdown("Click on the buttons to view the plots.")
 
     file_path = "outputs/v1"
     
