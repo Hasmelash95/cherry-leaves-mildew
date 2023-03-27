@@ -81,8 +81,8 @@ def cherry_leaves_visualisation_page():
 
 def image_montage_data(dir_path, label, nrows, ncols, figsize=(15, 30)):
     """
-    Function to subset label of interest, check if label is in the folder,
-    check if grid space is greater than the subset size and display the images. 
+    Function to check if label is in the folder, check if grid space is greater
+    than the image list length and display the images. 
     """
     sns.set_style("white")
     labels = os.listdir(dir_path)
