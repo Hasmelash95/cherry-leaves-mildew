@@ -8,10 +8,15 @@ def ml_performance_page():
     st.title("Machine Learning Performance")
 
     st.header("Labels Distribution Between the Sets")
-
-    labels_distribution = plt.imread(f"outputs/v2/label_distribution_graph.png")
-    st.image(labels_distribution, caption="Label distribution for train, validation"
-                                          " and test sets.")
+    
+    if st.button("Bar Plot"):
+        labels_distribution = plt.imread(f"outputs/v2/label_distribution_graph.png")
+        st.image(labels_distribution, caption="Label distribution for train, validation"
+                                              " and test sets.")
+    if st.button("Pie Chart"):
+        labels_distribution = plt.imread(f"outputs/v2/label_distribution_pie_plot.png")
+        st.image(labels_distribution, caption="Label distribution pie chart for train, validation"
+                                              " and test sets.")
     
     st.success("Even distribution between the labels. The sets have a 70:15:15 split"
                " for train, validation and test sets respectively.")
