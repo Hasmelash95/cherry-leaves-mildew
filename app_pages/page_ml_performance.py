@@ -10,11 +10,11 @@ def ml_performance_page():
     st.header("Labels Distribution Between the Sets")
     
     if st.button("Bar Plot"):
-        labels_distribution = plt.imread(f"outputs/v2/label_distribution_graph.png")
+        labels_distribution = plt.imread(f"outputs/v2/label_distribution_graph.jpg")
         st.image(labels_distribution, caption="Label distribution for train, validation"
                                               " and test sets.")
     if st.button("Pie Chart"):
-        labels_distribution = plt.imread(f"outputs/v2/label_distribution_pie_plot.png")
+        labels_distribution = plt.imread(f"outputs/v2/label_distribution_pie_plot.jpg")
         st.image(labels_distribution, caption="Label distribution pie chart for train, validation"
                                               " and test sets.")
     

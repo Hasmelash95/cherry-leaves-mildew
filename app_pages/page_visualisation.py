@@ -26,16 +26,16 @@ def cherry_leaves_visualisation_page():
     
     st.header("Image Dimensions")
  
-    if st.button("Dimensions Plot"):
-        dimensions = plt.imread(f"{file_path}/height_width_plot.png")
+    if st.button("Dimensions Scatterplot"):
+        dimensions = plt.imread(f"{file_path}/height_width_plot.jpg")
         st.image(dimensions, caption="Height vs Width (px)")
 
-        st.info("Every image in the data set has a height and width of 256 px.")
+    st.info("Every image in the data set has a height and width of 256 px.")
 
     st.header("Average Image and Image Variability")
 
     if st.button("Healthy"):
-        mean_std_healthy = plt.imread(f"{file_path}/mean_std_healthy.png")
+        mean_std_healthy = plt.imread(f"{file_path}/mean_std_healthy.jpg")
         st.image(mean_std_healthy, caption="Mean and variability of healthy leaves")
 
         st.success("The average image displays the general patterns of images beloning"
@@ -47,7 +47,7 @@ def cherry_leaves_visualisation_page():
                    " the highest variability.")
 
     if st.button("Powdery Mildew"):
-        mean_std_mildew = plt.imread(f"{file_path}/mean_std_powdery_mildew.png")
+        mean_std_mildew = plt.imread(f"{file_path}/mean_std_powdery_mildew.jpg")
         st.image(mean_std_mildew, caption="Mean and variability of powdery mildew leaves")
 
         st.success("The average image displays the general patterns of images beloning"
@@ -58,7 +58,7 @@ def cherry_leaves_visualisation_page():
                    " variability in where the white specks on the leaf are located.")
      
     if st.button("Differences Between Labels"):
-        differences = plt.imread(f"{file_path}/differences_healthy_powdery_mildew.png")
+        differences = plt.imread(f"{file_path}/differences_healthy_powdery_mildew.jpg")
         st.image(differences, caption="Differences in average image and variability between the labels")
 
         st.info("While it is not entirely reliable to decipher the differences between the"
