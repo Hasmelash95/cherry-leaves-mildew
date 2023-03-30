@@ -30,6 +30,14 @@ def cherry_leaves_visualisation_page():
         dimensions = plt.imread(f"{file_path}/height_width_plot.jpg")
         st.image(dimensions, caption="Height vs Width (px)")
 
+    if st.button("Width Distribution"):
+        width_dist = plt.imread(f"{file_path}/image_width_dist.jpg")
+        st.image(width_dist, caption="Histogram of distribution od image widths.")
+
+    if st.button("Height Distribution"):
+        width_dist = plt.imread(f"{file_path}/image_height_dist.jpg")
+        st.image(width_dist, caption="Histogram of distribution od image heights.")
+
     st.info("Every image in the data set has a height and width of 256 px.")
 
     st.header("Average Image and Image Variability")
