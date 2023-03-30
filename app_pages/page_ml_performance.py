@@ -25,12 +25,12 @@ def ml_performance_page():
 
     st.subheader("Accuracy Plot")
 
-    acc_plot = plt.imread(f"outputs/v2/model_accuracy.png")
+    acc_plot = plt.imread(f"outputs/v2/model_accuracy.jpg")
     st.image(acc_plot, caption="Accurcy plot during model training.")
 
     st.subheader("Loss Plot")
     
-    loss_plot = plt.imread(f"outputs/v2/model_loss.png")
+    loss_plot = plt.imread(f"outputs/v2/model_loss.jpg")
     st.image(loss_plot, caption="Loss plot during model training.")
 
     st.success("Both plots suggest a normal fit. The values between validation and"
