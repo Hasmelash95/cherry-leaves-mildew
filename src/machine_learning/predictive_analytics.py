@@ -30,8 +30,10 @@ def prediction_probablities_plot(probability, pred_class):
                 prob_per_class,
                 x="Label",
                 y=prob_per_class["Probability"],
+                color="Label",
+                color_discrete_sequence=px.colors.qualitative.Set3,
                 range_y=[0, 1],
-                width=600, height=500, template='seaborn'
+                width=600, height=500, template="ggplot2"
                 )
     st.plotly_chart(fig)
 
