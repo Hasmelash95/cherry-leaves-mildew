@@ -30,7 +30,7 @@ def mildew_detector_page():
     st.markdown("---")
 
     uploaded_image = st.file_uploader("Upload cherry leaf images. You can select multiple.",
-                                      type="jpg", accept_multiple_files=True)
+                                      type=["jpg", "jpeg", "png", "webp"], accept_multiple_files=True)
     
     if uploaded_image is not None:
         df_cherry_leaves = pd.DataFrame([])
