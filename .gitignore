@@ -1,6 +1,3 @@
-inputs/cherry_leaves_dataset/cherry_leaves/train
-inputs/cherry_leaves_dataset/cherry_leaves/validation
-inputs/cherry_leaves_dataset/cherry_leaves/test
 core.Microsoft*
 core.mongo*
 core.python*
