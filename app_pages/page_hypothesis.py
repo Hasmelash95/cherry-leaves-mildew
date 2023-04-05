@@ -14,11 +14,11 @@ def project_hypothesis_page():
                " cherry leaves.")
 
     st.markdown("2. We believe a model can be trained"
-                " to determine weather a given cherry leaf is"
+                " to determine whether a given cherry leaf is"
                 " healthy or contains powdery mildew with a"
                 " degree of 97% accuracy.")
     
-    st.success("A model has been successfully trained to"
+    st.success("A model has been successfully trained using CNN"
                " to class a given image (of a cherry leaf) as being"
                " healthy or containing mildew with a degree of accuracy"
                " above 99%.")
