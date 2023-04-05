@@ -41,4 +41,5 @@ def ml_performance_page():
     st.dataframe(pd.DataFrame(load_evaluate_pkl("v2"), index=["Loss", "Accuracy"]))
 
     st.success("The values strongly match that of the train and validation sets so"
-               " there is no overfitting.")
+               " there is no overfitting. The accuracy is over 97% and fulfills the"
+               " business requirements.")
