@@ -29,7 +29,7 @@ def project_summary_page():
 
     st.markdown("Farmy & Foods' IT team have decided to pursue a solution which uses"
                 " Machine Learning. A model will be trained using thousands of images"
-                " depicting both healthy and powdery mildew containing cherry leaves"
+                " depicting both healthy and powdery mildew-containing cherry leaves"
                 " to enable the prediction of whether a given cherry leaf is healthy"
                 " or not. If successful, this could be extended to detecting pests for"
                 " other crops and provide a practical solution to the problem that has"
