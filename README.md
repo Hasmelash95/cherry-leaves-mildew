@@ -1,33 +1,32 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Hermon Asmelash
 
-## Gitpod Template Instructions
+## Cherry Leaves Mildew Detection
 
-Welcome,
+Farmy & Foods' prize product - their cherry planntation - has had issues with powdery mildew. Powdery mildew is a fungus that covers the cherry leaves and is time consuming to visually detect. This project aims to create a dashboard app that plots differences between healthy and mildew-containing cherry leaves as well as develop a ML model that can predict whether a given image is a healthy cherry leaf or contains powdery mildew. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+## Table of Contents
 
-You can safely delete the Gitpod Template Instructions section of this README.md file,  and modify the remaining paragraphs for your own project. Please do read the Gitpod Template Instructions at least once, though! It contains some important information about Gitpod and the extensions we use. 
+[Planning](#planning)
+- [Business Requirements](#business-requirements)
+- [Hypothesis](#hypothesis-and-how-to-validate)
+- [Rationale](#map-business-requirements)
+- [ML Business Case](#ml-business-case)
+- [Dashboard Design](#dashboard-design)
 
-## Gitpod Reminders
+[Unfixed Bugs](#unfixed-bugs)
+- [Testing](#testing)
 
-To log into the Heroku toolbelt CLI:
+[Deployment](#deployment)
+- [Heroku](#heroku)
+[Technologies Used](#technologies-used)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+[Credits](#credits)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+[Acknowledgements](#acknowledgements)
 
+## Planning 
 
-## Dataset Content
-* The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
-* The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
-
-
-
-## Business Requirements
+### Business Requirements
 The cherry plantation crop from Farmy & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is manual verification if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If there is powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute.  The company has thousands of cherry trees, located on multiple farms across the country. As a result, this manual process is not scalable due to the time spent in the manual process inspection.
 
 To save time in this process, the IT team suggested an ML system that detects instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project for all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
@@ -37,27 +36,29 @@ To save time in this process, the IT team suggested an ML system that detects in
 * 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
 
-## Hypothesis and how to validate?
+### Hypothesis and how to validate?
 * List here your project hypothesis(es) and how you envision validating it (them).
 
 
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
+### Map Business Requirements
 * List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
 
 
-## ML Business Case
+### ML Business Case
 * In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
 
 
-## Dashboard Design
+### Dashboard Design
 * List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
 * Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
-
 
 ## Unfixed Bugs
 * You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
 
+### Testing
+
 ## Deployment
+
 ### Heroku
 
 * The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
@@ -72,7 +73,7 @@ To save time in this process, the IT team suggested an ML system that detects in
 6. If the slug size is too large then add large files not required for the app to the .slugignore file. 
 
 
-## Main Data Analysis and Machine Learning Libraries
+## Technologies Used
 * Here you should list the libraries used in the project and provide an example(s) of how you used these libraries.
 
 
@@ -94,5 +95,5 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 
 
-## Acknowledgements (optional)
+## Acknowledgements 
 * Thank the people that provided support throughout this project.
