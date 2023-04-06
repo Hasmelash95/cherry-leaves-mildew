@@ -115,7 +115,7 @@ The CRoss Industry Standard Process for Data Mining (CRISP-DM) is used as a rati
 * Yes, see User Stories section. 
 
 6. Ethical or Privacy concerns?
-* The client provided the data under an NDA (non-disclosure agreement) so data should be placed in the gitignore file.
+* The client provided the data under an NDA (non-disclosure agreement).
 
 7. Does the data suggest a particular model?
 * Yes, a binary classifier.
@@ -132,9 +132,49 @@ The CRoss Industry Standard Process for Data Mining (CRISP-DM) is used as a rati
 
 ### User Stories
 
+[User Stories](https://github.com/Hasmelash95/cherry-leaves-mildew-detection/blob/main/USERSTORY.md)
+
+Acceptance Criteria are defined under the Issues tab. 
+
 ### Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
-* Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
+
+The client can navigate between the pages using radio buttons on the left. 
+
+* Summary Page
+* * Introduction text
+* * Image of cherries on a cherry tree
+* * Solution text
+* * Business requirements
+* * Link to README
+
+* Visualisation Page
+* * Buttons to reveal each graph 
+* * Business requirement 1 at the top of the page
+* * Image dimensions scatter plot (height vs width)
+* * Image dimensions distrubiton graphs
+* * Average healthy image plot
+* * Average powdery mildew image plot
+* * Plot of differences between average healthy image and average powdery mildew 
+* * Image Montage with a selector tool for each label
+
+* Mildew Detector
+* * Business requirement 2 at the top of the page
+* * Link to download dataset from kaggle
+* * File uploader to upload cherry leaf image
+* * Probability text, probability graph and analysis report when image is uploaded
+
+* Hypothesis Page
+* * Hypothesis 1 - We believe that mildew containing cherry leaves can be detected by the white specks covering the leaf's surface.
+* * Validation of hypothesis 1
+* * Hypothesis 2  - We believe a model can be trained to determine whether a given cherry leaf is healthy or contains powdery mildew with a degree of 97% accuracy.
+* * Validation of hypothesis 2
+
+* ML Performance Page
+* * Bar plot of label distribution 
+* * Pie chart of label distribution
+* * Accuracy plot for train and validation set
+* * Loss plot for train and validation set
+* * Generalised performance on test set
 
 ## Testing
 
