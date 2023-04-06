@@ -11,7 +11,7 @@ def project_hypothesis_page():
                 " the leaf's surface.")
     
     st.success("Using average image and image variability plots"
-               " we were able to confirm this. White specks on"
+               " we were able to confirm this. White specks"
                " on the surface of the leaf is the distinguishing"
                " feature between healthy and powdery mildew containing"
                " cherry leaves.")

@@ -73,8 +73,8 @@ def cherry_leaves_visualisation_page():
         st.info("While it is not entirely reliable to decipher the differences between the"
                 " labels from sight alone, there are notable differences in the center of the images."
                 " The powdery mildew image shows there are white specks on the leaves. In the variability"
-                " plot, the light patches show that the variability between the images is highest where"
-                " the specks of mildew would be.")
+                " plot, the light patches show that there is variability between the labels where"
+                " the specks of mildew would be, although this is faint and hard to see.")
 
     st.header("Image Montage")
     
