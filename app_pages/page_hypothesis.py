@@ -1,6 +1,9 @@
 import streamlit as st
 
 def project_hypothesis_page():
+    """ 
+    Contents of hypothesis page.
+    """
     st.title("Hypothesis and Validation")
 
     st.markdown("1. We believe that mildew containing cherry leaves"

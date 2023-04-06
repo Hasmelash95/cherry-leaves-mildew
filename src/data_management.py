@@ -21,4 +21,7 @@ def download_df_as_csv(df):
     return href
 
 def load_pkl_file(file_path):
+    """
+    Function that loads pkl files when called.
+    """
     return joblib.load(filename=file_path)

@@ -5,6 +5,10 @@ from matplotlib.image import imread
 from src.machine_learning.evaluate_clf import load_evaluate_pkl
 
 def ml_performance_page():
+    """ 
+    Contents of ml performance page that displays
+    saved plots. 
+    """
     st.title("Machine Learning Performance")
 
     st.header("Labels Distribution Between the Sets")

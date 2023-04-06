@@ -3,6 +3,7 @@ import streamlit as st
 class MultiPage:
 
     def __init__(self, app_name) -> None:
+        # Define app name
         self.pages = []
         self.app_name = app_name
 
