@@ -2,23 +2,30 @@
 
 ## Cherry Leaves Mildew Detection
 
-Farmy & Foods' prize product - their cherry planntation - has had issues with powdery mildew. Powdery mildew is a fungus that covers the cherry leaves and is time consuming to visually detect. This project aims to create a dashboard app that plots differences between healthy and mildew-containing cherry leaves as well as develop a ML model that can predict whether a given image is a healthy cherry leaf or contains powdery mildew. 
+Farmy & Foods' prize product - their cherry planntation - has a growing powdery mildew problem. The symptoms of powdery mildew in cherry leaves typically begin as small, circular, white spots on the upper surfaces of leaves. As the disease progresses, the spots may coalesce and form a powdery white or grayish film that covers the entire leaf surface. Infected leaves may also become distorted, curl, and eventually fall off the tree. 
+
+The process of visually detecting this fungul infection and applying compounds to kill it is time consuming and untenable, especially as the business continues to grow. This project aims to create a dashboard app that plots differences between healthy and mildew-containing cherry leaves as well as develop a ML model that can predict whether a given image is a healthy cherry leaf or contains powdery mildew. 
+
+[Link to the deployed application.](https://cherry-leaves-mildew-detection.herokuapp.com/)
 
 ## Table of Contents
 
 [Planning](#planning)
 - [Business Requirements](#business-requirements)
 - [Hypothesis](#hypothesis-and-how-to-validate)
-- [Rationale](#map-business-requirements)
+- [Map Business Requirements](#map-business-requirements)
 - [ML Business Case](#ml-business-case)
+- [User Stories](#user-stories)
 - [Dashboard Design](#dashboard-design)
 
+[Testing](#testing)
+
 [Unfixed Bugs](#unfixed-bugs)
-- [Testing](#testing)
+
+[Technologies Used](#technologies-used)
 
 [Deployment](#deployment)
 - [Heroku](#heroku)
-[Technologies Used](#technologies-used)
 
 [Credits](#credits)
 
@@ -27,35 +34,112 @@ Farmy & Foods' prize product - their cherry planntation - has had issues with po
 ## Planning 
 
 ### Business Requirements
-The cherry plantation crop from Farmy & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is manual verification if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If there is powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute.  The company has thousands of cherry trees, located on multiple farms across the country. As a result, this manual process is not scalable due to the time spent in the manual process inspection.
 
-To save time in this process, the IT team suggested an ML system that detects instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project for all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
+The IT team of Farmy & Foods have proposed training a model using thousands of images depicting both healthy and powdery mildew-containing cherry leaves to enable the prediction of whether a given cherry leaf is healthy or not. If successful, this could be extended to detecting pests for other crops and provide a practical solution to the problem that has been plaguing them. In addition the average image pattern and image variability will be plot to determine the differences between healthy cherry leaves and those containing powdery mildew.
 
+To summarise, the business requirements are as follows:
 
-* 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
-* 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+1. The client is interested in visualising the differences between healthy cherry leaves and those containing powdery mildew. 
+
+2. The client is interested in predicting whether a given cherry leaf is healthy or contains powdery mildew.
 
 
 ### Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them).
 
+Hypothesis 1 - We believe that mildew containing cherry leaves can be detected by the white specks covering the leaf's surface.
+
+How to validate? - By using average image and image variability plots. Average image plots will determine patterns across images belonging to a particular label so the client can see the most dominant features of the images. Image variabilty plots will allow the client to determine the variation between images belonging to the same label - with parts that are darker indicating the least variation. The differences between average images of both labels will also be plotted.
+
+Hypothesis 2 - We believe a model can be trained to determine whether a given cherry leaf is healthy or contains powdery mildew with a degree of 97% accuracy.
+
+How to validate? - By training and validating a model using a Convolutional Neural Network (CNN) until it reaches that accuracy. Plotting accuracy and loss plots to ensure there is no underfitting (the model failing to learn) or overfitting (the model fails to predict on unseen data). Finally, the test set will be evaluated using the saved model. 
 
 ### Map Business Requirements
-* List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
 
+The CRoss Industry Standard Process for Data Mining (CRISP-DM) is used as a rationale to map business requirements to the Data Visualisations and ML tasks. It has six phases:
+
+![](https://www.datascience-pm.com/wp-content/uploads/2021/02/CRISP-DM.png)
+
+1. Business Understanding 
+* This addresses what Farmy & Foods needs from this project. The problem the project solves for the company. 
+* Farmy & Foods needs a less time consuming method of detecting whether a cherry leaf is infected with mildew. 
+* Farmy & Foods also wishes to visualise the differences between healthy and powdery mildew-containing cherry leaves.
+
+2. Data Understanding
+* This addresses whether we have the data that we need. For this project a dataset with 4208 images of labelled cherry leaves from [kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves) will be downloaded using Jupyter Notebooks.
+* The dataset will then be checked for non-image files (those that didn't end with image file extensions) and if any are found, they'll be deleted. 
+
+3. Data Preparation 
+* This addresses organising the data for modelling. 
+* The dataset will be split into train, validation and test sets (70%, 15%, 15% split respectively). For training the model, optimising the model and testing the model.
+* The dataset distribution will be plotted to ensure label balance so the model isn't biased toward one label and fail to predict the other as well.
+* Image Augmentation will be used to increase the number of training images by creating variations of the existing ones. This will reduce overfitting.
+
+4. Modelling
+* This addresses what modelling techniques will be used.
+* As the goal is to predict the label of an image - this is a Classification task. Binary as there are only two labels.
+* Deep learning models are used for image classification. This project will use a Convolutional Neural Network (CNN).
+* Layers will be stacked and arranged to form a neural network using a sequential model. 
+* Layers that will be used are - convolution, pooling, flatten, dense and dropout layers. The latter is to prevent overfitting.
+* The layers will generally use a ReLu activation function while the output layer will use a Sigmoid activation function (as it is binary classification).
+* Optimisers and Loss Function will be used to monitor the performance (Adam and Binary Crossentropy respectively).
+
+5. Evaluation 
+* This addresses the ML performance and whether the accuracy of the model is above 97% (and therefore business requirements have been met).
+* Loss and Accuracy plots for train and validation sets will help determine whether the model has fit normally (i.e. it is not underfitting or overfitting).
+* The test set will be evaluated to determine its accuracy and loss values.
+
+6. Deployment
+* This addresses how the client can view and assess the model.
+* Streamlit will be use to display the visualisation plots and the image montage on the dashboard
+* The client will also be able to upload images of cherry leaves to predict which labels they belong to in real time.
+* The ML performance will be displayed on the dashboard.
 
 ### ML Business Case
-* In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
 
+1. What are the business requirements?
+* 1. The client is interested in visualising the differences between healthy cherry leaves and those containing powdery mildew. 
+* 2. The client is interested in predicting whether a given cherry leaf is healthy or contains powdery mildew.
+
+2. Is there any business requirement that can be answered with conventional data analysis?
+* Yes, the first business requirements, data visualisation can be answered with conventional data analysis. Calculating the mean and standard deviation of the images to plot them.
+
+3. Does the client need a dashboard or an API endpoint?
+* Dahboard.
+
+4. What does the client consider as a successful project outcome?
+* Visual display of the differences between healthy cherry leaves and those containing powdery mildew.
+* The training of a model that can accurately predict what class a given cherry leaf image belongs to.
+
+5. Can you break down the project into Epics and User Stories?
+* Yes, see User Stories section. 
+
+6. Ethical or Privacy concerns?
+* The client provided the data under an NDA (non-disclosure agreement) so data should be placed in the gitignore file.
+
+7. Does the data suggest a particular model?
+* Yes, a binary classifier.
+
+8. What are the model's inputs and intended outputs?
+* Inputs - Cherry leaf image.
+* Outputs - Predicted label - healthy or powdery mildew.
+
+9. What are the criteria for the performance goal of the predictions?
+* 97% accuracy (or higher) was agreed upon with the client. 
+
+10. How will the client benefit?
+* Powdery mildew containing cherry leaves will not be released to the market, compromising the company. 
+
+### User Stories
 
 ### Dashboard Design
 * List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
 * Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
 
+## Testing
+
 ## Unfixed Bugs
 * You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
-
-### Testing
 
 ## Deployment
 
