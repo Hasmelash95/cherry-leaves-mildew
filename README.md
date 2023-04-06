@@ -18,6 +18,10 @@ The process of visually detecting this fungul infection and applying compounds t
 - [User Stories](#user-stories)
 - [Dashboard Design](#dashboard-design)
 
+[Screenshots](#screenshots)
+
+[Future Features](#future-features)
+
 [Testing](#testing)
 
 [Unfixed Bugs](#unfixed-bugs)
@@ -175,6 +179,45 @@ The client can navigate between the pages using radio buttons on the left.
 * * Accuracy plot for train and validation set
 * * Loss plot for train and validation set
 * * Generalised performance on test set
+
+## Screenshots
+
+Summary Page
+
+![Screenshot 2023-04-06 at 16 56 58](https://user-images.githubusercontent.com/103432143/230435459-c5d0f81a-3701-4bc9-9aba-f11ed962cfab.png)
+
+![Screenshot 2023-04-06 at 16 57 08](https://user-images.githubusercontent.com/103432143/230435495-70f59a49-4202-43eb-92a4-6cbf49ef427d.png)
+
+Visualisation Page
+
+![Screenshot 2023-04-06 at 16 57 15](https://user-images.githubusercontent.com/103432143/230435533-b0130416-ce3f-441f-8ef1-db38657cd2b5.png)
+
+![Screenshot 2023-04-06 at 16 56 00](https://user-images.githubusercontent.com/103432143/230435581-e50dce14-3f0b-4fb2-82fc-fa36c874633f.png)
+
+![Screenshot 2023-04-06 at 16 57 34](https://user-images.githubusercontent.com/103432143/230435609-8a1a77e7-3c51-470b-8366-011507946a21.png)
+
+Mildew Detector
+
+![Screenshot 2023-04-06 at 16 53 45](https://user-images.githubusercontent.com/103432143/230435657-39c5e833-465b-4379-872c-521aae8cd9be.png)
+
+Hypothesis Page
+
+![Screenshot 2023-04-06 at 16 57 43](https://user-images.githubusercontent.com/103432143/230435692-2f41b95c-3b5d-44c2-b47d-023cbfe7e17f.png)
+
+ML Performance Page
+
+![Screenshot 2023-04-06 at 16 57 52](https://user-images.githubusercontent.com/103432143/230435843-9f7bb68b-0c47-4a96-8b5f-e8295b2762a7.png)
+
+![Screenshot 2023-04-06 at 16 58 00](https://user-images.githubusercontent.com/103432143/230435868-e8ad811e-1129-43e6-b5e3-da187cf78631.png)
+
+![Screenshot 2023-04-06 at 16 58 08](https://user-images.githubusercontent.com/103432143/230435926-a3a49306-2b96-4d6a-82a6-adb91a049933.png)
+
+![Screenshot 2023-04-06 at 16 58 15](https://user-images.githubusercontent.com/103432143/230435954-ffd29ed7-1fe9-4502-8b90-731dbce858a3.png)
+
+## Future Features
+
+* Apply this model and project to other crops that are dealing with a pest problem.
+* Add user authentication to allow client only access.
 
 ## Testing
 
