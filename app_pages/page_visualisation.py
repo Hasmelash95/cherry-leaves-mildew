@@ -68,7 +68,7 @@ def cherry_leaves_visualisation_page():
      
     if st.button("Differences Between Labels"):
         differences = plt.imread(f"{file_path}/differences_healthy_powdery_mildew.jpg")
-        st.image(differences, caption="Differences in average image and variability between the labels")
+        st.image(differences, caption="Differences in average image between the labels")
 
         st.info("While it is not entirely reliable to decipher the differences between the"
                 " labels from sight alone, there are notable differences in the center of the images."
