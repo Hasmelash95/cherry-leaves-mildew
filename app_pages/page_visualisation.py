@@ -47,8 +47,8 @@ def cherry_leaves_visualisation_page():
         mean_std_healthy = plt.imread(f"{file_path}/mean_std_healthy.jpg")
         st.image(mean_std_healthy, caption="Mean and variability of healthy leaves")
 
-        st.success("The average image displays the general patterns of images beloning"
-                   " to that label. For the healthy leaf this pattern is a typical"
+        st.success("The average image displays the general patterns of images belonging"
+                   " to that label. For the healthy leaf, this pattern is a typical"
                    " green leafy shape. For variability, the lighter shades indicate"
                    " the most variability. For the healthy leaves, the center of the"
                    " image (the darkest part) has the most similarity across the set."
@@ -59,8 +59,8 @@ def cherry_leaves_visualisation_page():
         mean_std_mildew = plt.imread(f"{file_path}/mean_std_powdery_mildew.jpg")
         st.image(mean_std_mildew, caption="Mean and variability of powdery mildew leaves")
 
-        st.success("The average image displays the general patterns of images beloning"
-                   " to that label. For the powdery mildew containing leaf this pattern"
+        st.success("The average image displays the general patterns of images belonging"
+                   " to that label. For the powdery mildew-containing leaf, this pattern"
                    " is notable white specks on the surface of the leaf. For variability,"
                    " the lighter shades indicate the most variability. For the leaves"
                    " containing powdery mildew, the light patches indicate there is some"
