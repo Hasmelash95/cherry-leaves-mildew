@@ -165,7 +165,7 @@ The client can navigate between the pages using radio buttons on the left.
 * * Business requirement 2 at the top of the page
 * * Link to download dataset from kaggle
 * * File uploader to upload cherry leaf image
-* * Probability text, probability graph and analysis report when image is uploaded
+* * Prediction text, probability graph and analysis report when image is uploaded
 
 * Hypothesis Page
 * * Hypothesis 1 - We believe that mildew containing cherry leaves can be detected by the white specks covering the leaf's surface.
@@ -221,46 +221,71 @@ ML Performance Page
 
 ## Testing
 
+![Screenshot 2023-04-07 at 05 13 13](https://user-images.githubusercontent.com/103432143/230539553-3a4d51b6-1597-4609-82a7-cdf5933efc2c.png)
+
+The tests were carried out on macOS and Windows devices. The browsers tested were: Google Chrome, Microsoft Edge, Safari and Firefox.
+
+Acceptance Criteria for the user stories [seen here](https://github.com/Hasmelash95/cherry-leaves-mildew-detection/issues) were fulfilled. 
+
 ## Unfixed Bugs
-* You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+* There are no unfixed bugs present. 
 
 ## Deployment
 
 ### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
+* The App live link is: https://cherry-leaves-mildew-detection.herokuapp.com/
+
 * The project was deployed to Heroku using the following steps.
 
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file. 
+1. Ensure there is a setup.sh file that contains streamlit configuration and a runtime.txt file that has set the python environment to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
+2. Create a Heroku account or log in if you have one.
+3. Click on the "Create new app" button on the dashboard.
+4. Give the app a unique name.
+5. Select your region.
+6. Connect to Github under deployment method, search the repository you wish to link to and click 'connect'.
+7. Choose the branch you wish to deploy.
+8. Select either automatic or manual deploy. The former rebuilds the app everytime you git push.
+9. If the slug size is too large then add large files not required for the app to the .slugignore file. 
+10. Is a Heroku error states the python version is unavailable, logon to the Heroku CLI and enter this in the terminal: heroku stack:set heroku-20
+11. You will see an "App was successfully deployed" message.
+12. The application can be run by clicking 'Open App'.
 
+### Cloning the Repository
+1. Log on to your Github account and head to the main page of the repository you wish to clone.
+2. Click on the 'Code' button above the list of files and choose from HTTPS, SSH or Github CLI, to copy the URL provided.
+3. Open terminal and ensure you are in the correct location.
+4. Type in 'git clone' and paste the URL you'd copied in step 2 and press enter.
 
 ## Technologies Used
-* Here you should list the libraries used in the project and provide an example(s) of how you used these libraries.
+
+* Python 3.8.12
+* Jupyter Notebooks
+* GitHub
+* Git
+* Gitpod
+* Heroku
+
+### Libraries Used
+
+* NumPy 1.19.2
+* Pandas 1.1.2
+* Matplotlib 3.3.1
+* Seaborn 0.11.0
+* Plotly 4.12.0
+* Tensorflow 2.6.0
+* Streamlit 0.85.0
 
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
-
-### Content 
-
-- The text for the Home page was taken from Wikipedia Article A.
-- Instructions on how to implement form validation on the Sign-Up page were taken from [Specific YouTube Tutorial](https://www.youtube.com/).
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site.
-- The images used for the gallery page were taken from this other open-source site.
-
+* Source for the cherry tree image on the Summary Page - Photo by Irina Iriser: https://www.pexels.com/photo/red-cherries-3220347/
+* Cherry leaves dataset taken from Kaggle - https://www.kaggle.com/datasets/codeinstitute/cherry-leaves
+* Information on cherry leaves and powdery mildew from [Washington State University](https://treefruit.wsu.edu/crop-protection/disease-management/cherry-powdery-mildew/) and [ChatGPT](https://openai.com/blog/chatgpt).
+* Code Institute was the source of the template and the information from the fictional company - Farmy & Foods.
 
 
 ## Acknowledgements 
-* Thank the people that provided support throughout this project.
+* I would like to thank my mentor Rohit Sharma for his guidance during this project. 
+* Code Institue for the learning material that helped me during the project.
+* My friend, Daniel Jones for his typo checks. 
