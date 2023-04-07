@@ -58,7 +58,7 @@ How to validate? - By using average image and image variability plots. Average i
 
 Hypothesis 2 - We believe a model can be trained to determine whether a given cherry leaf is healthy or contains powdery mildew with a degree of 97% accuracy.
 
-How to validate? - By training and validating a model using a Convolutional Neural Network (CNN) until it reaches that accuracy. Plotting accuracy and loss plots to ensure there is no underfitting (the model failing to learn) or overfitting (the model fails to predict on unseen data). Finally, the test set will be evaluated using the saved model. 
+How to validate? - By training and validating a model using a Convolutional Neural Network (CNN) until it reaches that accuracy. Plotting accuracy and loss plots to ensure there is no underfitting (the model failing to learn) or overfitting (the model fails to predict on unseen data). Finally, the test set will be evaluated using the saved model to ensure the accuracy is above 97%. 
 
 ### Map Business Requirements
 
@@ -194,7 +194,7 @@ Visualisation Page
 
 ![Screenshot 2023-04-06 at 16 57 15](https://user-images.githubusercontent.com/103432143/230435533-b0130416-ce3f-441f-8ef1-db38657cd2b5.png)
 
-![Screenshot 2023-04-06 at 16 56 00](https://user-images.githubusercontent.com/103432143/230435581-e50dce14-3f0b-4fb2-82fc-fa36c874633f.png)
+![Screenshot 2023-04-07 at 11 41 34](https://user-images.githubusercontent.com/103432143/230595649-90ea53f7-156e-4039-a4c0-b7b1b1a0c299.png)
 
 ![Screenshot 2023-04-06 at 16 57 34](https://user-images.githubusercontent.com/103432143/230435609-8a1a77e7-3c51-470b-8366-011507946a21.png)
 
@@ -204,7 +204,7 @@ Mildew Detector
 
 Hypothesis Page
 
-![Screenshot 2023-04-06 at 16 57 43](https://user-images.githubusercontent.com/103432143/230435692-2f41b95c-3b5d-44c2-b47d-023cbfe7e17f.png)
+![Screenshot 2023-04-07 at 11 40 08](https://user-images.githubusercontent.com/103432143/230595573-c43c1d03-7de4-4fd1-be79-0ad8d50b595e.png)
 
 ML Performance Page
 
@@ -214,7 +214,7 @@ ML Performance Page
 
 ![Screenshot 2023-04-06 at 16 58 08](https://user-images.githubusercontent.com/103432143/230435926-a3a49306-2b96-4d6a-82a6-adb91a049933.png)
 
-![Screenshot 2023-04-06 at 16 58 15](https://user-images.githubusercontent.com/103432143/230435954-ffd29ed7-1fe9-4502-8b90-731dbce858a3.png)
+![Screenshot 2023-04-07 at 11 41 16](https://user-images.githubusercontent.com/103432143/230595618-8158d4f8-dc9e-4b4f-b454-98779a80d9c9.png)
 
 ## Future Features
 
