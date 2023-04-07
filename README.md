@@ -218,6 +218,7 @@ ML Performance Page
 
 ## Future Features
 
+* Include images of half a cherry leaf during model training for a more accurate model.
 * Apply this model and project to other crops that are dealing with a pest problem.
 * Add user authentication to allow client only access.
 
@@ -241,17 +242,18 @@ Acceptance Criteria for the user stories [seen here](https://github.com/Hasmelas
 * The project was deployed to Heroku using the following steps.
 
 1. Ensure there is a setup.sh file that contains streamlit configuration and a runtime.txt file that has set the python environment to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-2. Create a Heroku account or log in if you have one.
-3. Click on the "Create new app" button on the dashboard.
-4. Give the app a unique name.
-5. Select your region.
-6. Connect to Github under deployment method, search the repository you wish to link to and click 'connect'.
-7. Choose the branch you wish to deploy.
-8. Select either automatic or manual deploy. The former rebuilds the app everytime you git push.
-9. If the slug size is too large then add large files not required for the app to the .slugignore file. 
-10. Is a Heroku error states the python version is unavailable, logon to the Heroku CLI and enter this in the terminal: heroku stack:set heroku-20
-11. You will see an "App was successfully deployed" message.
-12. The application can be run by clicking 'Open App'.
+2. Push the code using "git push" on the command line of the IDE. (i.e. gitpod). 
+3. Create a Heroku account or log in if you have one.
+4. Click on the "Create new app" button on the dashboard.
+5. Give the app a unique name.
+6. Select your region.
+7. Connect to Github under deployment method, search the repository you wish to link to and click 'connect'.
+8. Choose the branch you wish to deploy.
+9. Select either automatic or manual deploy. The former rebuilds the app everytime you git push.
+10. If the slug size is too large then add large files not required for the app to the .slugignore file. 
+11. Is a Heroku error states the python version is unavailable, logon to the Heroku CLI and enter this in the terminal: heroku stack:set heroku-20
+12. You will see an "App was successfully deployed" message.
+13. The application can be run by clicking 'Open App'.
 
 ### Cloning the Repository
 1. Log on to your Github account and head to the main page of the repository you wish to clone.
