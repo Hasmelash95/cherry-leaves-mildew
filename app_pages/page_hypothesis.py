@@ -21,8 +21,8 @@ def project_hypothesis_page():
                 " healthy or contains powdery mildew with a"
                 " degree of 97% accuracy.")
     
-    st.success("A model has been successfully trained using CNN"
-               " to class a given image (of a cherry leaf) as being"
+    st.success("A model has been successfully trained using a Convolutional Neural"
+               " Network to class a given image (of a cherry leaf) as being"
                " healthy or containing mildew with a degree of accuracy"
-               " above 99%.")
+               " above 99%. Loss and accuracy plots indicate a normal fit.")
 

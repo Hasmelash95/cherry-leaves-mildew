@@ -37,8 +37,11 @@ def ml_performance_page():
     loss_plot = plt.imread(f"outputs/v2/model_loss.jpg")
     st.image(loss_plot, caption="Loss plot during model training")
 
-    st.success("Both plots suggest a normal fit. The values between validation and"
-               " training sets are similar.")
+    st.success("Both plots suggest a normal fit. The accuracy of the"
+               " train set does not continue to increase as the validation"
+               " set flattens. For the loss plot, the training set rapidly"
+               " decreases at first and then begins to flatten, the two lines"
+               " growing closer together.")
 
     st.header("Generalised Performance on Test Set")
 
