@@ -8,6 +8,8 @@ The process of visually detecting this fungul infection and applying compounds t
 
 [Link to the deployed application.](https://cherry-leaves-mildew-detection.herokuapp.com/)
 
+![Screenshot 2023-04-07 at 09 13 17](https://user-images.githubusercontent.com/103432143/230570486-227a3e79-c4ee-4158-9885-10c89acc49d4.png)
+
 ## Table of Contents
 
 [Planning](#planning)
@@ -283,6 +285,7 @@ Acceptance Criteria for the user stories [seen here](https://github.com/Hasmelas
 * Cherry leaves dataset taken from Kaggle - https://www.kaggle.com/datasets/codeinstitute/cherry-leaves
 * Information on cherry leaves and powdery mildew from [Washington State University](https://treefruit.wsu.edu/crop-protection/disease-management/cherry-powdery-mildew/) and [ChatGPT](https://openai.com/blog/chatgpt).
 * Code Institute was the source of the template and the information from the fictional company - Farmy & Foods.
+* CRISP-DM diagram taken from https://www.datascience-pm.com/crisp-dm-2/
 
 
 ## Acknowledgements 
