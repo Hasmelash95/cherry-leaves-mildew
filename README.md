@@ -142,6 +142,8 @@ The CRoss Industry Standard Process for Data Mining (CRISP-DM) is used as a rati
 
 Acceptance Criteria are defined under the Issues tab. 
 
+[Link to kanban board](https://github.com/users/Hasmelash95/projects/5)
+
 ### Dashboard Design
 
 The client can navigate between the pages using radio buttons on the left. 
@@ -226,7 +228,7 @@ ML Performance Page
 
 ![Screenshot 2023-04-07 at 05 13 13](https://user-images.githubusercontent.com/103432143/230539553-3a4d51b6-1597-4609-82a7-cdf5933efc2c.png)
 
-The tests were carried out on macOS and Windows devices. The browsers tested were: Google Chrome, Microsoft Edge, Safari and Firefox.
+The tests were carried out on macOS and Windows devices. The browsers tested were: Google Chrome, Microsoft Edge, Safari and Firefox. All passed.
 
 Acceptance Criteria for the user stories [seen here](https://github.com/Hasmelash95/cherry-leaves-mildew-detection/issues) were fulfilled. 
 
